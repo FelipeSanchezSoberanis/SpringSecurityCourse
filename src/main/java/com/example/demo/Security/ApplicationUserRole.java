@@ -34,5 +34,9 @@ public enum ApplicationUserRole {
         return permissions;
     }
 
+    public String getRole() {
+        return "ROLE_" + this.name();
+    }
+
 }
 
