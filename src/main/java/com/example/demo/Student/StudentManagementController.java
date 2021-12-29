@@ -29,7 +29,7 @@ public class StudentManagementController {
 
     @PostMapping
     public void registerNewStudent(@RequestBody Student student) {
-        System.out.println(student);
+        System.out.println(student.toString());
     }
 
     @DeleteMapping(path = "{studentId}")
@@ -39,7 +39,7 @@ public class StudentManagementController {
 
     @PutMapping(path = "{studentId}")
     public void updateStudent(@PathVariable("studentId") Integer studentId, @RequestBody Student student) {
-        System.out.println(String.format("%s %s", studentId, student));
+        System.out.println(String.format("%s %s", studentId, student.toString()));
     }
 
 }
