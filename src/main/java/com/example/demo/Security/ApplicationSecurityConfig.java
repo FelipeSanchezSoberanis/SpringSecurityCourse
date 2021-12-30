@@ -47,7 +47,14 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
         .and()
             .rememberMe()
             .tokenValiditySeconds((int)TimeUnit.DAYS.toSeconds(21))
-            .key("somethingVerySecure");
+            .key("somethingVerySecure")
+        .and()
+            .logout()
+            .logoutUrl("/logout")
+            .clearAuthentication(true)
+            .invalidateHttpSession(true)
+            .deleteCookies("JSESSIONID", "remember-me")
+            .logoutSuccessUrl("/login");
     }
 
     @Override
