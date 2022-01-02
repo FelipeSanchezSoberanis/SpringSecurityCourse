@@ -1,22 +1,120 @@
-# Getting Started
+# Topics
 
-### Reference Documentation
-For further reference, please consider the following sections:
+- INTRO
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.6.2/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.6.2/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.2/reference/htmlsingle/#boot-features-developing-web-applications)
+- QUICK WORD BEFORE WE BEGIN
 
-### Guides
-The following guides illustrate how to use some features concretely:
+- BOOTSTRAPPING
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
+- RUNNING APP WITH INTELLIJ
 
-### Additional Links
-These additional references should also help you:
+- LETS BUILD AN API
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+- INSTALLING SPRING SECURITY
+
+- FORM BASED AUTHENTICATION OVERVIEW
+
+- BASIC AUTH OVERVIEW
+
+- BASIC AUTH
+
+- POSTMAN
+
+- ANT MATCHERS
+
+- APPLICATION USERS
+
+- IN MEMORY USER DETAILS MANAGER
+
+- PASSWORD ENCODING WITH BCRYPT
+
+- ROLES AND PERMISSIONS
+
+- ADMIN USER
+
+- ROLES & PERMISSIONS USING ENUMS
+
+- ROLE BASED AUTHENTICATION
+
+- PERMISSION BASED AUTHENTICATION
+
+- DISABLING CSRF
+
+- hasAuthority()
+
+- ADDING AUTHORITIES TO USERS
+
+- PERMISSION BASED AUTHENTICATION IN ACTION
+
+- ORDER DOES MATTER
+
+- preAuthorize()
+
+- UNDERSTANDING CSRF
+
+- CSRF TOKEN
+
+- HOW CSRF TOKEN GENERATION WORKS
+
+- LETS DISABLE CSRF AGAIN
+
+- FORM BASED AUTHENTICATION
+
+- ENABLE FORM BASED AUTHENTICATION
+
+- SESSION ID
+
+- CUSTOM LOGIN PAGE
+
+- REDIRECT AFTER SUCCESS LOGIN
+
+- REMEMBER ME
+
+- REMEMBER ME COOKIE AND EXTRA OPTIONS
+
+- LOGOUT
+
+- LOGOUT BUTTON
+
+- PASSWORD, USERNAME, REMEMBER-ME  PARAMETERS
+
+- DB AUTHENTICATION OVERVIEW
+
+- APPLICATION USER CLASS
+
+- APPLICATION USER SERVICE
+
+- APPLICATION USER CLASS
+
+- APPLICATION USER DAO INTERFACE
+
+- FAKE APPLICATION USER SERVICE
+
+- DAO AUTHENTICATION PROVIDER
+
+- HELLO
+
+- INTRO TO JSON WEB TOKEN (JWT)
+
+- JWT LIBRARY
+
+-  JwtUsernameAndPasswordAuthenticationFilter - attemptAuthentication()
+
+- JwtUsernameAndPasswordAuthenticationFilter - successfulAuthentication
+
+- REQUEST FILTERS
+
+- FILTERS AND STATELESS SESSIONS
+
+- JWT USERNAME AND PASSWORD FILTER
+
+- JWT TOKEN VERIFIER FILTER
+
+- JWT TOKEN VERIFIER FILTER IN ACTION
+
+- JWT CONFIG
+
+- JWT CONFIG IN ACTION
+
+- QUICK WORD ABOUT JWT
 
