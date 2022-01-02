@@ -5,6 +5,7 @@ import static com.example.demo.Security.ApplicationUserRole.STUDENT;
 import java.util.concurrent.TimeUnit;
 
 import com.example.demo.Auth.ApplicationUserService;
+import com.example.demo.Jwt.JwtUsernameAndPasswordAuthenticationFilter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
@@ -36,26 +38,14 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .csrf().disable()
+            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and()
+            .addFilter(new JwtUsernameAndPasswordAuthenticationFilter(authenticationManager()))
             .authorizeRequests()
             .antMatchers("/", "index", "/css/*", "/js/*").permitAll()
             .antMatchers("/api/**").hasAuthority(STUDENT.getRole())
             .anyRequest()
-            .authenticated()
-        .and()
-            .formLogin()
-            .loginPage("/login").permitAll()
-            .defaultSuccessUrl("/courses", true)
-        .and()
-            .rememberMe()
-            .tokenValiditySeconds((int)TimeUnit.DAYS.toSeconds(21))
-            .key("somethingVerySecure")
-        .and()
-            .logout()
-            .logoutUrl("/logout")
-            .clearAuthentication(true)
-            .invalidateHttpSession(true)
-            .deleteCookies("JSESSIONID", "remember-me")
-            .logoutSuccessUrl("/login");
+            .authenticated();
     }
 
     @Override
