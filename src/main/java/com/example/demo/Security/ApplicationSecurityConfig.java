@@ -2,8 +2,6 @@ package com.example.demo.Security;
 
 import static com.example.demo.Security.ApplicationUserRole.STUDENT;
 
-import java.util.concurrent.TimeUnit;
-
 import com.example.demo.Auth.ApplicationUserService;
 import com.example.demo.Jwt.JwtUsernameAndPasswordAuthenticationFilter;
 
